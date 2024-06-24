@@ -58,16 +58,57 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Creacion de Controladores
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+```bash
+# --flat es para que no cree una carpeta 
+$ nest g co controllers/orders --flat
 
-## Stay in touch
+# --no-spec para no crear el archivo de Spec.ts
+$ nest g co controllers/orders --no-spec
+```
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## Creacion de Modulos
 
-## License
+```bash
+# --flat es para que no cree una carpeta 
+$ nest g mo modules/orders --flat
 
-Nest is [MIT licensed](LICENSE).
+# --no-spec para no crear el archivo de Spec.ts
+$ nest g mo modules/orders --no-spec
+```
+
+
+## Creacion de Service
+
+```bash
+# --flat es para que no cree una carpeta 
+$ nest g s service/orders --flat
+
+# --no-spec para no crear el archivo de Spec.ts
+$ nest g s service/orders --no-spec
+```
+
+
+## Estructura de Carpetas escalable en el proyecto
+
+```bash
+# Creación de carpertas de la estructura con su respectivo Controlador y su Servicio, no se crea el Modulo porque esta Global.
+$ nest g co order/controller/order --flat --no-spec
+$ nest g s order/service/order --flat --no-spec
+
+$ nest g co user/controller/user --flat --no-spec
+$ nest g s user/service/user --flat --no-spec
+
+$ nest g co customer/controller/customer --flat --no-spec
+$ nest g s customer/service/customer --flat --no-spec
+
+$ nest g co category/controller/category --flat --no-spec
+$ nest g s category/service/category --flat --no-spec
+
+$ nest g co product/controller/product --flat --no-spec
+$ nest g s product/service/product --flat --no-spec
+
+$ nest g co brand/controller/brand --flat --no-spec
+$ nest g s brand/service/brand --flat --no-spec
+```
